@@ -1,17 +1,20 @@
 var React = require('react');
 var DocumentTitle = require('react-document-title');
+var moment = require('moment');
 
 module.exports = React.createClass({
   displayName: 'Dashboard',
   getInitialState: function () {
     return {
-      seconds: 0
+      time: moment().format('MMMM Do YYYY, h:mm:ss a')
     };
   },
   componentDidMount: function () {
     var self = this;
     this.interval = setInterval(function () {
-      self.setState({seconds: self.state.seconds + 1});
+      self.setState({
+        time: moment().format('MMMM Do YYYY, h:mm:ss a')
+      });
     }, 1000);
   },
   componentWillUnmount: function () {
@@ -22,7 +25,7 @@ module.exports = React.createClass({
       <DocumentTitle title="Dashboard">
         <div>
           <p>Dashboard</p>
-          <p>{this.state.seconds}s</p>
+          <p>{this.state.time}</p>
         </div>
       </DocumentTitle>
     );
