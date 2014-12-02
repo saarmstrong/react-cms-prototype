@@ -1,0 +1,25 @@
+{
+  "name": "react-cms-prototype",
+  "version": "1.0.0",
+  "description": "react-cms-prototype ===================",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/wayneashleyberry/react-cms-prototype.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/wayneashleyberry/react-cms-prototype/issues"
+  },
+  "homepage": "https://github.com/wayneashleyberry/react-cms-prototype",
+  "devDependencies": {
+    "react": "^0.12.1",
+    "react-document-title": "^0.1.3",
+    "react-router": "^0.11.4",
+    "reactify": "^0.17.1"
+  }
+}
