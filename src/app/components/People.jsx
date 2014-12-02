@@ -6,6 +6,7 @@ var RouteHandler = Router.RouteHandler;
 var DocumentTitle = require('react-document-title');
 
 module.exports = React.createClass({
+  mixins: [Router.State],
   getDefaultProps: function() {
     return {
       data: [
@@ -16,16 +17,18 @@ module.exports = React.createClass({
     };
   },
   render: function() {
+    var params = this.getParams();
+    var hasPerson = typeof params.personId === 'string';
     var list = this.props.data.map(function(data, key) {
-      return <PersonListItem key={key} {...data} />;
+      return <PersonListItem key={key} summary={hasPerson} {...data} />;
     });
     return (
-      <DocumentTitle title="People">
-        <div className="container-fluid">
-          <div className="col-md-4">
+      <DocumentTitle title='People'>
+        <div className='container-fluid'>
+          <div className={hasPerson ? 'col-md-4' : null}>
             <div>{list}</div>
           </div>
-          <div className="col-md-8">
+          <div className={hasPerson ? 'col-md-8' : null}>
             <RouteHandler />
           </div>
         </div>
