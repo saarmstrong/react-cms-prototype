@@ -4,6 +4,14 @@ react-cms-prototype
 ![](https://david-dm.org/wayneashleyberry/react-cms-prototype.svg?style=flat)
 ![](https://david-dm.org/wayneashleyberry/react-cms-prototype/dev-status.svg?style=flat)
 
+### Components
+
+- [React](http://facebook.github.io/react/)
+- [React Router](https://github.com/rackt/react-router)
+- [JSX](http://facebook.github.io/react/docs/jsx-in-depth.html)
+- [Browserify](http://browserify.org/)
+- [Watchify](https://github.com/substack/watchify)
+
 ### Setup
 
 ```sh
