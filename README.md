@@ -31,3 +31,10 @@ php -S localhost:8080
 cd src
 node static.js [path]
 ```
+
+Examples:
+
+```sh
+node static.js /
+node static.js /people/1
+```
