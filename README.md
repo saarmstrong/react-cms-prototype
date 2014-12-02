@@ -1,6 +1,9 @@
 react-cms-prototype
 ===================
 
+![](https://david-dm.org/wayneashleyberry/react-cms-prototype.svg?style=flat)
+![](https://david-dm.org/wayneashleyberry/react-cms-prototype/dev-status.svg?style=flat)
+
 ### Setup
 
 ```sh
