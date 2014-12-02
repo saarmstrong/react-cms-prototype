@@ -9,6 +9,10 @@ var FormGroup = React.createClass({
 });
 
 module.exports = React.createClass({
+  submitHandler: function (e) {
+    e.preventDefault();
+    //
+  },
   render: function () {
     return (
       <DocumentTitle title="Login">
@@ -17,7 +21,7 @@ module.exports = React.createClass({
           <br />
           <Column span={4} offset={4}>
             <p className="lead">Login</p>
-            <form>
+            <form onSubmit={this.submitHandler}>
               <FormGroup>
                 <input type="text" placeholder="Email Address" className="form-control" />
               </FormGroup>
