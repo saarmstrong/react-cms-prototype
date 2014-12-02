@@ -14,7 +14,7 @@ module.exports = React.createClass({
     }, this);
     return (
       <DocumentTitle title='People'>
-        <div className=''>
+        <div>
           <Column span={hasPerson ? 4 : 10}>
             <div>{list}</div>
           </Column>
