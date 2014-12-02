@@ -4,6 +4,7 @@ var Navigation = Router.Navigation;
 var State = Router.State;
 
 module.exports = React.createClass({
+  displayName: 'NavItem',
   mixins: [Navigation, State],
   propTypes: {
     to: React.PropTypes.string.isRequired,
@@ -11,8 +12,8 @@ module.exports = React.createClass({
     query: React.PropTypes.object,
     onClick: React.PropTypes.func
   },
-  handleClick: function (event) {
-    event.preventDefault();
+  handleClick: function (e) {
+    e.preventDefault();
     this.transitionTo(this.props.to, this.props.params, this.props.query);
   },
   getHref: function () {

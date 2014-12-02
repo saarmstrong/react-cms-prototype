@@ -15,7 +15,7 @@ module.exports = React.createClass({
           </Nav>
         </div>
         <div className="col-md-10">
-          <RouteHandler />
+          <RouteHandler {...this.props} />
         </div>
       </div>
     );

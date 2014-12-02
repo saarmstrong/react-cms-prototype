@@ -4,7 +4,7 @@ var DocumentTitle = require('react-document-title');
 var PersonListItem = require('./PersonListItem.jsx');
 
 module.exports = React.createClass({
-  mixins: [Router.State],
+  displayName: 'People',
   getDefaultProps: function() {
     return {
       data: [
@@ -15,11 +15,10 @@ module.exports = React.createClass({
     };
   },
   render: function() {
-    var params = this.getParams();
-    var hasPerson = typeof params.personId === 'string';
+    var hasPerson = typeof this.props.params.personId === 'string';
     var list = this.props.data.map(function(data, key) {
       return <PersonListItem key={key} summary={hasPerson} {...data} />;
-    });
+    }, this);
     return (
       <DocumentTitle title='People'>
         <div className=''>
@@ -27,7 +26,7 @@ module.exports = React.createClass({
             <div>{list}</div>
           </div>
           <div className={hasPerson ? 'col-md-8' : 'col-md-2'}>
-            <Router.RouteHandler />
+            <Router.RouteHandler {...this.props} />
           </div>
         </div>
       </DocumentTitle>

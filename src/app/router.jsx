@@ -19,7 +19,7 @@ var NotFound = React.createClass({
 
 var Main = React.createClass({
   render: function() {
-    return <RouteHandler />;
+    return <RouteHandler {...this.props} />;
   }
 });
 
@@ -61,8 +61,9 @@ var routes = (
 
 module.exports = {
   init: function(node) {
-    return Router.run(routes, Router.HistoryLocation, function (Handler) {
-      React.render(<Handler />, node);
+    return Router.run(routes, Router.HistoryLocation, function (Handler, state) {
+      var params = state.params;
+      React.render(<Handler params={params} />, node);
     });
   }
 };
