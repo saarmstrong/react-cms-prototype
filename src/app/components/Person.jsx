@@ -2,6 +2,7 @@ var React = require('react');
 var Router = require('react-router');
 var DocumentTitle = require('react-document-title');
 var PersonNav = require('./PersonNav.jsx');
+var Link = Router.Link;
 
 module.exports = React.createClass({
   displayName: 'Person',
@@ -10,7 +11,9 @@ module.exports = React.createClass({
     return (
       <DocumentTitle title={title}>
         <div>
-          <h1>{title}</h1>
+          <Link to="person" {...this.props}>
+            <h1>{title}</h1>
+          </Link>
           <PersonNav {...this.props}/>
           <br />
           <Router.RouteHandler {...this.props}/>
