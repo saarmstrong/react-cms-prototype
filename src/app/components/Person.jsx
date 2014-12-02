@@ -8,7 +8,7 @@ module.exports = React.createClass({
     var title = 'Person '+this.getParams().personId;
     return (
       <DocumentTitle title={title}>
-        <p>{title}</p>
+        <h1>{title}</h1>
       </DocumentTitle>
     );
   }
