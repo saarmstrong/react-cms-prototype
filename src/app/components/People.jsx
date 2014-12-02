@@ -7,6 +7,13 @@ var PeopleStore = require('../stores/People.js');
 
 module.exports = React.createClass({
   displayName: 'People',
+  getDefaultProps: function () {
+    return {
+      params: {
+        //
+      }
+    };
+  },
   render: function () {
     var hasPerson = typeof this.props.params.personId === 'string';
     var list = PeopleStore.get().map(function (data, key) {

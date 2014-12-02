@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/wayneashleyberry/react-cms-prototype",
   "devDependencies": {
+    "node-jsx": "^0.12.4",
     "react": "^0.12.1",
     "react-document-title": "^0.1.3",
     "react-router": "^0.11.4",

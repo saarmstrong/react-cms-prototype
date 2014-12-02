@@ -24,3 +24,10 @@ Tab 2:
 cd src
 php -S localhost:8080
 ```
+
+### Render Static Pages
+
+```sh
+cd src
+node static.js [path]
+```
