@@ -7,7 +7,7 @@ var Column = require('./Column.jsx');
 module.exports = React.createClass({
   render: function () {
     return (
-      <div className="container-fluid">
+      <div>
         <br />
         <Column span={2}>
           <Nav>
