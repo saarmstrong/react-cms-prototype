@@ -18,7 +18,7 @@ var Main = React.createClass({
 
 var routes = (
   <Route name="main" handler={Main}>
-    <Route name="login" handler={Login} path="login"/>
+    <Route name="login" handler={Login} path="/login"/>
     <Route name="app" handler={App} path="/">
       <DefaultRoute name="home" handler={Dashboard}/>
       <Route name="people" handler={People} path="people">
