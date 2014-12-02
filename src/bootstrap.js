@@ -1,3 +1,3 @@
 var router = require('./app/router.jsx');
 
-router.init(document.getElementById('app'));
+router.run(document.getElementById('app'));
