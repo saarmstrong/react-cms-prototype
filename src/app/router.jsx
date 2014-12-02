@@ -8,12 +8,7 @@ var App = require('./components/App.jsx');
 var People = require('./components/People.jsx');
 var Person = require('./components/Person.jsx');
 var Login = require('./components/Login.jsx');
-
-var Home = React.createClass({
-  render: function() {
-    return <p>Home</p>;
-  }
-});
+var Dashboard = require('./components/Dashboard.jsx');
 
 var Main = React.createClass({
   render: function() {
@@ -25,7 +20,7 @@ var routes = (
   <Route name="main" handler={Main}>
     <Route name="login" handler={Login} path="/login"/>
     <Route name="app" handler={App} path="/">
-      <DefaultRoute name="home" handler={Home}/>
+      <DefaultRoute name="home" handler={Dashboard}/>
       <Route name="people" handler={People} path="/people">
         <Route name="person" handler={Person} path="/people/:personId"/>
       </Route>
@@ -34,9 +29,9 @@ var routes = (
 );
 
 module.exports = {
-  init: function() {
+  init: function(node) {
     return Router.run(routes, Router.HistoryLocation, function (Handler) {
-      React.render(<Handler />, document.getElementById('app'));
+      React.render(<Handler />, node);
     });
   }
 };
