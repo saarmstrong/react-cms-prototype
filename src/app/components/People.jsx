@@ -1,9 +1,7 @@
 var React = require('react');
 var Router = require('react-router');
-var PersonListItem = require('./PersonListItem.jsx');
-var Link = Router.Link;
-var RouteHandler = Router.RouteHandler;
 var DocumentTitle = require('react-document-title');
+var PersonListItem = require('./PersonListItem.jsx');
 
 module.exports = React.createClass({
   mixins: [Router.State],
@@ -29,7 +27,7 @@ module.exports = React.createClass({
             <div>{list}</div>
           </div>
           <div className={hasPerson ? 'col-md-8' : null}>
-            <RouteHandler />
+            <Router.RouteHandler />
           </div>
         </div>
       </DocumentTitle>
