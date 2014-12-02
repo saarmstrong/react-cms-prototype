@@ -14,6 +14,7 @@ module.exports = React.createClass({
         <div>
           <h1>{title}</h1>
           <PersonNav />
+          <br />
           <RouteHandler />
         </div>
       </DocumentTitle>

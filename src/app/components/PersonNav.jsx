@@ -1,6 +1,6 @@
 var React = require('react');
 var Router = require('react-router');
-var Link = Router.Link;
+var NavItem = require('./NavItem.jsx');
 
 module.exports = React.createClass({
   mixins: [Router.State],
@@ -12,8 +12,8 @@ module.exports = React.createClass({
     return (
       <div>
         <ul className='nav nav-tabs'>
-          <li><Link to="person/foo" params={params}>Foo</Link></li>
-          <li><Link to="person/bar" params={params}>Bar</Link></li>
+          <NavItem to="person/foo" params={params}>Foo</NavItem>
+          <NavItem to="person/bar" params={params}>Bar</NavItem>
         </ul>
       </div>
     );
