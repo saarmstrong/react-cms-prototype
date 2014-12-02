@@ -1,6 +1,7 @@
 var React = require('react');
 var Column = require('./Column.jsx');
 var DocumentTitle = require('react-document-title');
+var PageTitle = require('./PageTitle.jsx');
 
 var FormGroup = React.createClass({
   render: function () {
@@ -17,10 +18,8 @@ module.exports = React.createClass({
     return (
       <DocumentTitle title="Login">
         <div className="container">
-          <br />
-          <br />
           <Column span={4} offset={4}>
-            <p className="lead">Login</p>
+            <PageTitle>Login</PageTitle>
             <form onSubmit={this.submitHandler}>
               <FormGroup>
                 <input type="text" placeholder="Email Address" className="form-control" />

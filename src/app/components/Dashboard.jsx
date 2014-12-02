@@ -1,6 +1,7 @@
 var React = require('react');
 var DocumentTitle = require('react-document-title');
 var moment = require('moment');
+var PageTitle = require('./PageTitle.jsx');
 
 module.exports = React.createClass({
   displayName: 'Dashboard',
@@ -24,7 +25,7 @@ module.exports = React.createClass({
     return (
       <DocumentTitle title="Dashboard">
         <div>
-          <p>Dashboard</p>
+          <PageTitle>Dashboard</PageTitle>
           <p>{this.state.time}</p>
         </div>
       </DocumentTitle>

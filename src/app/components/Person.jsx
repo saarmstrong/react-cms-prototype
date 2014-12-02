@@ -3,6 +3,7 @@ var Router = require('react-router');
 var DocumentTitle = require('react-document-title');
 var PersonNav = require('./PersonNav.jsx');
 var Link = Router.Link;
+var PageTitle = require('./PageTitle.jsx');
 
 module.exports = React.createClass({
   displayName: 'Person',
@@ -12,7 +13,7 @@ module.exports = React.createClass({
       <DocumentTitle title={title}>
         <div>
           <Link to="person" {...this.props}>
-            <h1>{title}</h1>
+            <PageTitle>{title}</PageTitle>
           </Link>
           <PersonNav {...this.props}/>
           <br />

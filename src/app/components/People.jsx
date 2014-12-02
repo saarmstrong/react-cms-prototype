@@ -4,6 +4,7 @@ var DocumentTitle = require('react-document-title');
 var PersonListItem = require('./PersonListItem.jsx');
 var Column = require('./Column.jsx');
 var PeopleStore = require('../stores/People.js');
+var PageTitle = require('./PageTitle.jsx');
 
 module.exports = React.createClass({
   displayName: 'People',
@@ -23,6 +24,7 @@ module.exports = React.createClass({
       <DocumentTitle title='People'>
         <div>
           <Column span={hasPerson ? 4 : 10}>
+            <PageTitle>People</PageTitle>
             <div>{list}</div>
           </Column>
           <Column span={hasPerson ? 8 : 2}>
