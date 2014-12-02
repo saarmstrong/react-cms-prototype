@@ -1,6 +1,12 @@
 var React = require('react');
 var DocumentTitle = require('react-document-title');
 
+var FormGroup = React.createClass({
+  render: function () {
+    return <div className="form-group">{this.props.children}</div>;
+  }
+});
+
 module.exports = React.createClass({
   render: function () {
     return (
@@ -10,15 +16,15 @@ module.exports = React.createClass({
           <br />
           <p className="lead">Login</p>
           <form>
-            <div className="form-group">
+            <FormGroup>
               <input type="text" placeholder="Email Address" className="form-control" />
-            </div>
-            <div className="form-group">
+            </FormGroup>
+            <FormGroup>
               <input type="password" placeholder="Password" className="form-control" />
-            </div>
-            <div className="form-group">
+            </FormGroup>
+            <FormGroup>
               <input type="submit" className="btn btn-default" />
-            </div>
+            </FormGroup>
           </form>
         </div>
       </DocumentTitle>
