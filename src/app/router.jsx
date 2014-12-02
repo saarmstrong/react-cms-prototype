@@ -23,6 +23,26 @@ var Main = React.createClass({
   }
 });
 
+var PersonFoo = React.createClass({
+  render: function() {
+    return (
+      <DocumentTitle title="Person Foo">
+        <p>This is foo...</p>
+      </DocumentTitle>
+    );
+  }
+});
+
+var PersonBar = React.createClass({
+  render: function() {
+    return (
+      <DocumentTitle title="Person Bar">
+        <p>This is bar...</p>
+      </DocumentTitle>
+    );
+  }
+});
+
 var routes = (
   <Route name="main" handler={Main} path="/">
     <NotFoundRoute handler={NotFound}/>
@@ -30,7 +50,10 @@ var routes = (
     <Route name="app" handler={App} path="/">
       <DefaultRoute name="home" handler={Dashboard}/>
       <Route name="people" handler={People} path="people">
-        <Route name="person" handler={Person} path=":personId"/>
+        <Route name="person" handler={Person} path=":personId">
+          <Route name="person/foo" handler={PersonFoo} path="foo"/>
+          <Route name="person/bar" handler={PersonBar} path="bar"/>
+        </Route>
       </Route>
     </Route>
   </Route>
