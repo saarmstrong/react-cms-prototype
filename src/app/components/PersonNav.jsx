@@ -2,7 +2,7 @@ var React = require('react');
 var NavItem = require('./NavItem.jsx');
 
 module.exports = React.createClass({
-  render: function() {
+  render: function () {
     return (
       <div>
         <ul className='nav nav-tabs'>

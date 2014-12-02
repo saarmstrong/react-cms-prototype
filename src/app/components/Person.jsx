@@ -5,7 +5,7 @@ var PersonNav = require('./PersonNav.jsx');
 
 module.exports = React.createClass({
   displayName: 'Person',
-  render: function() {
+  render: function () {
     var title = 'Person '+this.props.params.personId;
     return (
       <DocumentTitle title={title}>

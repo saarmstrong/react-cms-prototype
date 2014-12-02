@@ -12,19 +12,19 @@ var DefaultRoute = Router.DefaultRoute;
 var NotFoundRoute = Router.NotFoundRoute;
 
 var NotFound = React.createClass({
-  render: function() {
+  render: function () {
     return <p>Nope!</p>;
   }
 });
 
 var Main = React.createClass({
-  render: function() {
+  render: function () {
     return <RouteHandler {...this.props} />;
   }
 });
 
 var PersonFoo = React.createClass({
-  render: function() {
+  render: function () {
     return (
       <DocumentTitle title="Person Foo">
         <p>This is foo...</p>
@@ -34,7 +34,7 @@ var PersonFoo = React.createClass({
 });
 
 var PersonBar = React.createClass({
-  render: function() {
+  render: function () {
     return (
       <DocumentTitle title="Person Bar">
         <p>This is bar...</p>
@@ -60,7 +60,7 @@ var routes = (
 );
 
 module.exports = {
-  init: function(node) {
+  init: function (node) {
     return Router.run(routes, Router.HistoryLocation, function (Handler, state) {
       var params = state.params;
       React.render(<Handler params={params} />, node);

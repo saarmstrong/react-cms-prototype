@@ -3,7 +3,7 @@ var Link = require('react-router').Link;
 
 module.exports = React.createClass({
   displayName: 'PersonListItem',
-  render: function() {
+  render: function () {
     var params = {
       personId: this.props.id
     };

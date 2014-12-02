@@ -5,7 +5,7 @@ var PersonListItem = require('./PersonListItem.jsx');
 
 module.exports = React.createClass({
   displayName: 'People',
-  getDefaultProps: function() {
+  getDefaultProps: function () {
     return {
       data: [
         {id: 1, name: 'Person 1'},
@@ -14,9 +14,9 @@ module.exports = React.createClass({
       ]
     };
   },
-  render: function() {
+  render: function () {
     var hasPerson = typeof this.props.params.personId === 'string';
-    var list = this.props.data.map(function(data, key) {
+    var list = this.props.data.map(function (data, key) {
       return <PersonListItem key={key} summary={hasPerson} {...data} />;
     }, this);
     return (
