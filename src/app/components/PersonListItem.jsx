@@ -10,7 +10,7 @@ module.exports = React.createClass({
     return (
       <div>
         <Link to='person' params={params}>{this.props.name}</Link>
-        <p>{this.props.summary ? text.substr(0, 140) : text}</p>
+        <p>{this.props.summary ? text.substr(0, 140).trim() + '…' : text}</p>
       </div>
     );
   }
