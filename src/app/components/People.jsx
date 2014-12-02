@@ -22,11 +22,11 @@ module.exports = React.createClass({
     });
     return (
       <DocumentTitle title='People'>
-        <div className='container-fluid'>
-          <div className={hasPerson ? 'col-md-4' : null}>
+        <div className=''>
+          <div className={hasPerson ? 'col-md-4' : 'col-md-10'}>
             <div>{list}</div>
           </div>
-          <div className={hasPerson ? 'col-md-8' : null}>
+          <div className={hasPerson ? 'col-md-8' : 'col-md-2'}>
             <Router.RouteHandler />
           </div>
         </div>
