@@ -4,6 +4,12 @@ react-cms-prototype
 ![](https://david-dm.org/wayneashleyberry/react-cms-prototype.svg?style=flat)
 ![](https://david-dm.org/wayneashleyberry/react-cms-prototype/dev-status.svg?style=flat)
 
+## About
+
+Just playing with some new technologies to see how they all fit togehter. This
+is just a UI experiment and is not concerned with dispathers, stores,
+persistance or anything like that :)
+
 ### Components
 
 - [React](http://facebook.github.io/react/)
