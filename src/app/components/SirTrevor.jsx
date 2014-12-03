@@ -46,7 +46,8 @@ module.exports = React.createClass({
       <div className='container'>
         <DocumentTitle title={this.props.title} />
         <PageTitle>{this.props.title}</PageTitle>
-        <form onSubmit={this.submitHandler}>
+        {this.state.loading ? <p>Loading…</p> : null}
+        <form onSubmit={this.submitHandler} className={this.state.loading ? 'hidden' : null}>
           <textarea ref='editor' />
           <br />
           <input type='submit' className='btn btn-default btn-lg btn-block' />
