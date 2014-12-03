@@ -26,10 +26,10 @@ module.exports = React.createClass({
     });
   },
   componentDidMount: function () {
-    var self = this;
+    var component = this;
     this.load(function () {
-      var $el = window.$(self.refs.editor.getDOMNode());
-      self.editor = new window.SirTrevor.Editor({ el: $el });
+      var $el = window.$(component.refs.editor.getDOMNode());
+      component.editor = new window.SirTrevor.Editor({ el: $el });
     });
   },
   componentDidUnmount: function () {
