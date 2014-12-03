@@ -16,10 +16,10 @@ var NotFoundRoute = Router.NotFoundRoute;
 
 module.exports = [
   <Route name="login" handler={Login} path="/login"/>,
-  <Route name="sir-trevor" handler={SirTrevor} path="/sir-trevor"/>,
   <Route name="app" handler={App} path="/">
     <NotFoundRoute handler={NotFound}/>
     <DefaultRoute name="home" handler={Dashboard}/>
+    <Route name="sir-trevor" handler={SirTrevor} path="sir-trevor"/>
     <Route name="people" handler={People} path="people">
       <Route name="person" handler={Person} path=":personId">
         <Route name="person/foo" handler={PersonFoo} path="foo"/>
