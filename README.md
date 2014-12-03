@@ -34,7 +34,8 @@ Tab 1:
 
 ```sh
 cd src
-watchify bootstrap.js -o bootstrap-compiled.js -v -t reactify
+mkdir dist
+watchify bootstrap.js -o dist/bootstrap.js -v -t reactify
 ```
 
 Tab 2:
