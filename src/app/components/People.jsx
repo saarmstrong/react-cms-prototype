@@ -18,6 +18,8 @@ module.exports = React.createClass({
   render: function () {
     var hasPerson = typeof this.props.params.personId === 'string';
     var list = PeopleStore.get().map(function (data, key) {
+      data.params = this.props.params;
+      data.active = (parseInt(data.params.personId) == data.id);
       return <PersonListItem key={key} summary={hasPerson} {...data} />;
     }, this);
     return (
