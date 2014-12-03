@@ -14,9 +14,10 @@ anything like that :)
 
 - [React](http://facebook.github.io/react/)
 - [React Router](https://github.com/rackt/react-router)
-- [JSX](http://facebook.github.io/react/docs/jsx-in-depth.html)
-- [Browserify](http://browserify.org/)
+- [JSX](https://github.com/facebook/jsx)
+- [Browserify](https://github.com/substack/node-browserify)
 - [Watchify](https://github.com/substack/watchify)
+- [Sir Trevor](https://github.com/madebymany/sir-trevor-js)
 
 ### Setup
 
