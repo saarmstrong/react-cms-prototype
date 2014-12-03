@@ -12,6 +12,7 @@ module.exports = React.createClass({
   },
   componentDidUnmount: function () {
     this.editor.destroy();
+    delete this.editor;
   },
   submitHandler: function (e) {
     e.preventDefault();
