@@ -6,9 +6,9 @@ React CMS Prototype
 
 ## About
 
-Just playing with some new technologies to see how they all fit togehter. This
-is just a UI experiment and is not concerned with dispathers, stores,
-persistance or anything like that :)
+Playing with some new technologies to see how they all fit togehter. This is
+a UI experiment and is not concerned with dispatchers, stores, persistance or
+anything like that :)
 
 ### Components
 
