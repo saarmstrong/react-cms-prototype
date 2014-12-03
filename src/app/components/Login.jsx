@@ -16,24 +16,23 @@ module.exports = React.createClass({
   },
   render: function () {
     return (
-      <DocumentTitle title="Login">
-        <div className="container">
-          <Column span={4} offset={4}>
-            <PageTitle>Login</PageTitle>
-            <form onSubmit={this.submitHandler}>
-              <FormGroup>
-                <input type="text" placeholder="Email Address" className="form-control" />
-              </FormGroup>
-              <FormGroup>
-                <input type="password" placeholder="Password" className="form-control" />
-              </FormGroup>
-              <FormGroup>
-                <input type="submit" className="btn btn-default" />
-              </FormGroup>
-            </form>
-          </Column>
-        </div>
-      </DocumentTitle>
+      <div className="container">
+        <DocumentTitle title="Login" />
+        <Column span={4} offset={4}>
+          <PageTitle>Login</PageTitle>
+          <form onSubmit={this.submitHandler}>
+            <FormGroup>
+              <input type="text" placeholder="Email Address" className="form-control" />
+            </FormGroup>
+            <FormGroup>
+              <input type="password" placeholder="Password" className="form-control" />
+            </FormGroup>
+            <FormGroup>
+              <input type="submit" className="btn btn-default" />
+            </FormGroup>
+          </form>
+        </Column>
+      </div>
     );
   }
 });

@@ -23,17 +23,16 @@ module.exports = React.createClass({
       return <PersonListItem key={key} summary={hasPerson} {...data} />;
     }, this);
     return (
-      <DocumentTitle title='People'>
-        <div>
-          <Column span={hasPerson ? 4 : 10}>
-            <PageTitle>People</PageTitle>
-            <div>{list}</div>
-          </Column>
-          <Column span={hasPerson ? 8 : 2}>
-            <Router.RouteHandler {...this.props} />
-          </Column>
-        </div>
-      </DocumentTitle>
+      <div>
+        <DocumentTitle title='People' />
+        <Column span={hasPerson ? 4 : 10}>
+          <PageTitle>People</PageTitle>
+          <div>{list}</div>
+        </Column>
+        <Column span={hasPerson ? 8 : 2}>
+          <Router.RouteHandler {...this.props} />
+        </Column>
+      </div>
     );
   }
 });

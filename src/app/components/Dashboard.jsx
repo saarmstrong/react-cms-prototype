@@ -23,12 +23,11 @@ module.exports = React.createClass({
   },
   render: function () {
     return (
-      <DocumentTitle title="Dashboard">
-        <div>
-          <PageTitle>Dashboard</PageTitle>
-          <p>{this.state.time}</p>
-        </div>
-      </DocumentTitle>
+      <div>
+        <DocumentTitle title="Dashboard" />
+        <PageTitle>Dashboard</PageTitle>
+        <p>{this.state.time}</p>
+      </div>
     );
   }
 });

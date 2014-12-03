@@ -6,9 +6,10 @@ module.exports = React.createClass({
   render: function () {
     var title = 'Person '+this.props.params.personId+' Foo';
     return (
-      <DocumentTitle title={title}>
+      <div>
+        <DocumentTitle title={title} />
         <p>This is foo...</p>
-      </DocumentTitle>
+      </div>
     );
   }
 });

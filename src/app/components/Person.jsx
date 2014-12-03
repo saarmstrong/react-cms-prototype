@@ -10,16 +10,15 @@ module.exports = React.createClass({
   render: function () {
     var title = 'Person '+this.props.params.personId;
     return (
-      <DocumentTitle title={title}>
-        <div>
-          <Link to="person" {...this.props}>
-            <PageTitle>{title}</PageTitle>
-          </Link>
-          <PersonNav {...this.props}/>
-          <br />
-          <Router.RouteHandler {...this.props}/>
-        </div>
-      </DocumentTitle>
+      <div>
+        <DocumentTitle title={title} />
+        <Link to="person" {...this.props}>
+          <PageTitle>{title}</PageTitle>
+        </Link>
+        <PersonNav {...this.props}/>
+        <br />
+        <Router.RouteHandler {...this.props}/>
+      </div>
     );
   }
 });
