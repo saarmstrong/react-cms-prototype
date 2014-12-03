@@ -13,15 +13,13 @@ module.exports = React.createClass({
     };
   },
   load: function (callback) {
-    var self = this;
-    head.load('/vendor/sir-trevor.css');
     head.load([
       '/vendor/jquery.js',
       '/vendor/lodash.js',
       '/vendor/eventable.js',
-      '/vendor/sir-trevor.js'
+      '/vendor/sir-trevor.js',
+      '/vendor/sir-trevor.css'
     ], function () {
-      self.setState({loading: false});
       callback();
     });
   },
@@ -30,6 +28,7 @@ module.exports = React.createClass({
     this.load(function () {
       var $el = window.$(component.refs.editor.getDOMNode());
       component.editor = new window.SirTrevor.Editor({ el: $el });
+      component.setState({loading: false});
     });
   },
   componentDidUnmount: function () {
