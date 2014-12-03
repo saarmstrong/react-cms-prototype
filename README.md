@@ -18,6 +18,7 @@ anything like that :)
 - [Browserify](https://github.com/substack/node-browserify)
 - [Watchify](https://github.com/substack/watchify)
 - [Sir Trevor](https://github.com/madebymany/sir-trevor-js)
+- [HeadJS](https://github.com/headjs/headjs)
 
 ### Setup
 
