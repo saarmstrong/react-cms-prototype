@@ -1,4 +1,4 @@
-react-cms-prototype
+React CMS Prototype
 ===================
 
 ![](https://david-dm.org/wayneashleyberry/react-cms-prototype.svg?style=flat)
