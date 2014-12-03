@@ -8,6 +8,7 @@ var Dashboard = require('./components/Dashboard.jsx');
 var NotFound = require('./components/NotFound.jsx');
 var PersonFoo = require('./components/PersonFoo.jsx');
 var PersonBar = require('./components/PersonBar.jsx');
+var SirTrevor = require('./components/SirTrevor.jsx');
 var RouteHandler = Router.RouteHandler;
 var Route = Router.Route;
 var DefaultRoute = Router.DefaultRoute;
@@ -15,6 +16,7 @@ var NotFoundRoute = Router.NotFoundRoute;
 
 module.exports = [
   <Route name="login" handler={Login} path="/login"/>,
+  <Route name="sir-trevor" handler={SirTrevor} path="/sir-trevor"/>,
   <Route name="app" handler={App} path="/">
     <NotFoundRoute handler={NotFound}/>
     <DefaultRoute name="home" handler={Dashboard}/>
