@@ -12,6 +12,7 @@ module.exports = React.createClass({
         <Column span={2}>
           <Nav>
             <NavItem to="home">Dashboard</NavItem>
+            <NavItem to="sir-trevor">Sir Trevor</NavItem>
             <NavItem to="people">People</NavItem>
           </Nav>
         </Column>
